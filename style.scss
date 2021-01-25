@@ -1,0 +1,24 @@
+.form-input-label{
+    position: relative;
+
+    label{
+        position: absolute;
+        top: 38px;
+        left: 16px;
+        z-index: 1;
+        font-weight: 900;
+        color: $label_color;
+        @include transition(.3s all ease);
+    }
+    input,
+    textarea{
+        position: relative;
+        z-index: 0;
+        background-color: transparent;
+    }
+    &.focused > label{
+        top: 0;
+        left: 0;
+        font-size: 14px;
+    }
+}
